@@ -1,0 +1,31 @@
+@import "styles/variables";
+
+.tabs-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+  &__links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    &__btn {
+      border: none;
+      background-color: transparent;
+      color: $white;
+      padding: 10px 30px;
+      cursor: pointer;
+      &.active {
+        border-bottom: 1px solid $blue;
+      }
+    }
+  }
+  &__content {
+    height: auto;
+    display: flex;
+  }
+}

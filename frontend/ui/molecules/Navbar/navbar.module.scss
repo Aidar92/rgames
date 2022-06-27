@@ -1,0 +1,85 @@
+@import "styles/mixins";
+
+.icon {
+  width: 21px;
+  height: 21px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #222;
+  color: #fff;
+
+  &__links {
+    &__checkbox_toggle {
+      display: none;
+
+      &:checked {
+        @include media(mobile, tablet, desktop) {
+          ~ .navbar__menu {
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+          }
+        }
+      }
+    }
+
+    &__hamburger {
+      display: none;
+      user-select: none;
+
+      @include media(mobile, tablet, desktop) {
+        display: block;
+        width: 21px;
+      }
+    }
+  }
+
+
+  &__logo {
+    font-size: 32px;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+    @include media(mobile, tablet, desktop) {
+      display: none;
+      position: absolute;
+      background-color: #222;
+      right: 0;
+      text-align: center;
+      padding: 16px;
+    }
+
+    &__break {
+      display: none;
+      width: 100%;
+      @include media(mobile, tablet) {
+        display: block;
+      }
+    }
+
+
+    &__item {
+      padding: 5px 14px;
+      cursor: pointer;
+      list-style: none;
+      @include media(mobile, tablet) {
+        display: block;
+        padding: 0;
+      }
+
+      &:hover {
+        background-color: #4c9e9e;
+        border-radius: 5px;
+        transition: 0.3s ease;
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@nestjs/serve-static": "^2.2.2",
+    "cross-env": "^7.0.3",
+    "ky": "^0.30.0",
+    "next-auth": "^4.3.4"
+  }
+}
